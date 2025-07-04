@@ -3,127 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HYPER ULTRA BOT | Ultimate Discord Experience</title>
+    <title>HYPER ULTRA BOT | Next-Gen Discord Experience</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="config.js" defer></script>
     <script src="script.js" defer></script>
+    <!-- 3D Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <!-- Animated Background Canvas -->
+    <canvas id="galaxy-bg" class="galaxy-bg"></canvas>
+    
+    <!-- ParticleJS Background -->
     <div class="particles" id="particles-js"></div>
+    
+    <!-- Floating UI Elements -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    
     <div class="content">
+        <!-- Holographic Navigation -->
         <nav class="hyper-nav">
             <div class="nav-brand">
-                <span class="hyper-gradient">HYPER</span>ULTRA
+                <span class="hyper-gradient">ULTRA</span>BOT
+                <div class="nav-pulse"></div>
             </div>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="docs.html">Docs</a>
-                <a href="commands.html">Commands</a>
-                <a href="#" id="invite-btn">Invite</a>
-                <a href="#" id="support-btn">Support</a>
+                <a href="index.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
+                <a href="docs.html"><i class="fas fa-book"></i> <span>Docs</span></a>
+                <a href="commands.html"><i class="fas fa-terminal"></i> <span>Commands</span></a>
+                <a href="#" id="invite-btn" class="nav-cta"><i class="fas fa-robot"></i> <span>Invite</span></a>
+                <a href="#" id="support-btn" class="nav-cta"><i class="fas fa-headset"></i> <span>Support</span></a>
             </div>
             <div class="nav-toggle">
-                <i class="fas fa-bars"></i>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
 
+        <!-- Main Hero Section -->
         <header class="hyper-header">
             <div class="header-content">
+                <div class="tech-badge">NEW AI UPDATE v4.2</div>
                 <h1 class="hyper-title">
                     <span class="hyper-gradient">ULTRA</span> DISCORD BOT
                 </h1>
                 <p class="hyper-subtitle">
-                    The most advanced, feature-packed Discord bot with AI, moderation, music, and 200+ commands
+                    The most advanced Discord bot with <span class="typing-animation"></span>
                 </p>
+                
+                <!-- Interactive Stats Grid -->
+                <div class="live-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-server"></i></div>
+                        <div class="stat-data">
+                            <div class="stat-number counter" data-target="12500">0</div>
+                            <div class="stat-label">Servers</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-data">
+                            <div class="stat-number counter" data-target="5200000">0</div>
+                            <div class="stat-label">Users</div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="header-buttons">
-                    <button class="hyper-btn hyper-primary" id="main-invite">
+                    <button class="hyper-btn hyper-primary glow-on-hover" id="main-invite">
                         <i class="fas fa-robot"></i> Add to Server
                     </button>
                     <button class="hyper-btn hyper-secondary" id="main-docs">
-                        <i class="fas fa-book"></i> Documentation
+                        <i class="fas fa-eye"></i> Live Demo
                     </button>
                 </div>
             </div>
-            <div class="header-image">
-                <img src="https://i.imgur.com/J7q5Z0N.png" alt="Hyper Ultra Bot" class="bot-avatar">
-                <div class="pulse-ring"></div>
+            
+            <!-- 3D Bot Model Container -->
+            <div class="header-model">
+                <div class="bot-model-container" id="bot-model">
+                    <!-- 3D model will be rendered here -->
+                    <div class="model-placeholder">
+                        <img src="https://i.imgur.com/J7q5Z0N.png" alt="Ultra Bot" class="bot-avatar">
+                        <div class="holographic-effect"></div>
+                    </div>
+                </div>
+                <div class="model-controls">
+                    <button class="model-btn" id="rotate-model"><i class="fas fa-sync-alt"></i></button>
+                    <button class="model-btn" id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                    <button class="model-btn" id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                </div>
             </div>
         </header>
 
-        <section class="hyper-features">
-            <h2 class="section-title hyper-gradient">Why Choose Hyper Ultra?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Lightning Fast</h3>
-                    <p>Optimized for performance with sub-100ms response times</p>
+        <!-- ULTRA Features Section -->
+        <section class="ultra-features">
+            <div class="section-header">
+                <h2 class="section-title hyper-gradient">ULTRA FEATURES</h2>
+                <p class="section-subtitle">Powered by cutting-edge technology</p>
+                <div class="tech-tags">
+                    <span>AI-Powered</span>
+                    <span>Machine Learning</span>
+                    <span>Neural Networks</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                    <h3>Fully Customizable</h3>
-                    <p>Configure every aspect to match your server's needs</p>
+            </div>
+            
+            <!-- Feature Tabs -->
+            <div class="feature-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="ai">AI Core</button>
+                    <button class="tab-btn" data-tab="moderation">Moderation</button>
+                    <button class="tab-btn" data-tab="entertainment">Entertainment</button>
+                    <button class="tab-btn" data-tab="utility">Utility</button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                
+                <div class="tab-contents">
+                    <!-- AI Core Tab -->
+                    <div class="tab-content active" data-tab="ai">
+                        <div class="feature-grid">
+                            <div class="feature-card ai-card">
+                                <div class="feature-icon pulse"><i class="fas fa-brain"></i></div>
+                                <h3>Neural Processing</h3>
+                                <p>Advanced neural networks for natural language understanding and contextual responses</p>
+                                <div class="feature-badge">PRO</div>
+                            </div>
+                            <div class="feature-card ai-card">
+                                <div class="feature-icon pulse"><i class="fas fa-robot"></i></div>
+                                <h3>Personality Matrix</h3>
+                                <p>Customizable personality profiles with mood simulation and memory retention</p>
+                                <div class="feature-badge">EXCLUSIVE</div>
+                            </div>
+                            <div class="feature-card ai-card">
+                                <div class="feature-icon pulse"><i class="fas fa-comment-dots"></i></div>
+                                <h3>Conversational AI</h3>
+                                <p>Human-like conversations with context awareness and emotional intelligence</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Advanced Moderation</h3>
-                    <p>Auto-mod, filters, and protection against raids</p>
+                    
+                    <!-- Moderation Tab -->
+                    <div class="tab-content" data-tab="moderation">
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                                <h3>Auto-Defense System</h3>
+                                <p>Real-time protection against raids, spam, and malicious content</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-user-secret"></i></div>
+                                <h3>Behavior Analysis</h3>
+                                <p>Detects suspicious behavior patterns and potential troublemakers</p>
+                                <div class="feature-badge">AI-POWERED</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-music"></i>
+            </div>
+            
+            <!-- Feature Comparison -->
+            <div class="feature-comparison">
+                <h3>See how we compare</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-header">
+                        <div class="header-item">Feature</div>
+                        <div class="header-item">Ultra Bot</div>
+                        <div class="header-item">Others</div>
                     </div>
-                    <h3>High Quality Music</h3>
-                    <p>Spotify, YouTube, SoundCloud support with playlists</p>
+                    <div class="comparison-row">
+                        <div class="row-item">AI Responses</div>
+                        <div class="row-item"><i class="fas fa-check-circle"></i> Contextual</div>
+                        <div class="row-item"><i class="fas fa-times-circle"></i> Basic</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="row-item">Uptime</div>
+                        <div class="row-item">99.99%</div>
+                        <div class="row-item">95-98%</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="hyper-stats">
-            <div class="stat-item">
-                <div class="stat-number" id="server-count">10,000+</div>
-                <div class="stat-label">Servers</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="user-count">5M+</div>
-                <div class="stat-label">Users</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="command-count">200+</div>
-                <div class="stat-label">Commands</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Uptime</div>
+        <!-- Interactive Demo Section -->
+        <section class="interactive-demo">
+            <div class="demo-container">
+                <h2 class="section-title hyper-gradient">LIVE INTERACTIVE DEMO</h2>
+                <p>Try our bot right in your browser</p>
+                
+                <div class="demo-window">
+                    <div class="demo-header">
+                        <div class="demo-buttons">
+                            <span class="demo-btn red"></span>
+                            <span class="demo-btn yellow"></span>
+                            <span class="demo-btn green"></span>
+                        </div>
+                        <div class="demo-title">Ultra Bot Console</div>
+                    </div>
+                    
+                    <div class="demo-content">
+                        <div class="demo-messages" id="demo-chat">
+                            <div class="bot-message">
+                                <div class="message-avatar"><img src="https://i.imgur.com/J7q5Z0N.png" alt="Ultra Bot"></div>
+                                <div class="message-content">
+                                    <div class="message-sender">Ultra Bot</div>
+                                    <div class="message-text">Hello! I'm Ultra Bot, the most advanced Discord bot. Try asking me something!</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-input">
+                            <input type="text" id="demo-input" placeholder="Type a command or message...">
+                            <button id="demo-send"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
+    <!-- Holographic Footer -->
     <footer class="hyper-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <span class="hyper-gradient">HYPER</span>ULTRA
+                <span class="hyper-gradient">ULTRA</span>BOT
+                <p>The future of Discord bots</p>
             </div>
-            <div class="footer-links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+            
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">GitHub</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">GDPR</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            © 2023 Hyper Ultra Bot. All rights reserved.
+        
+        <div class="footer-credits">
+            <p>© 2023 ULTRA Bot Technologies. All rights reserved.</p>
+            <div class="tech-stack">
+                <span>Powered by:</span>
+                <i class="fab fa-node-js" title="Node.js"></i>
+                <i class="fas fa-brain" title="TensorFlow.js"></i>
+                <i class="fas fa-cloud" title="Cloudflare"></i>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab">
+        <i class="fas fa-comment-alt"></i>
+        <span class="fab-tooltip">Need help? Chat with us!</span>
+    </div>
+
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-sphere"></div>
+                <div class="loader-sphere"></div>
+                <div class="loader-sphere"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for 3D Model -->
+    <script>
+        // This would be replaced with actual Three.js code
+        // For now it's just a placeholder
+        document.addEventListener('DOMContentLoaded', function() {
+            // 3D model initialization would go here
+            console.log('3D model would be initialized here');
+        });
+    </script>
 </body>
 </html>
