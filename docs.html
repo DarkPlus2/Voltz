@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPER ULTRA BOT | Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    <div class="content">
+        <nav class="hyper-nav">
+            <div class="nav-brand">
+                <span class="hyper-gradient">HYPER</span>ULTRA
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="docs.html" class="active">Docs</a>
+                <a href="commands.html">Commands</a>
+                <a href="#" id="invite-btn">Invite</a>
+                <a href="#" id="support-btn">Support</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <main class="docs-container">
+            <aside class="docs-sidebar">
+                <div class="sidebar-search">
+                    <input type="text" placeholder="Search documentation...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="sidebar-menu">
+                    <div class="menu-section">
+                        <div class="menu-title">Getting Started</div>
+                        <a href="#installation" class="menu-item active">Installation</a>
+                        <a href="#configuration" class="menu-item">Configuration</a>
+                        <a href="#permissions" class="menu-item">Permissions</a>
+                    </div>
+                    <div class="menu-section">
+                        <div class="menu-title">Features</div>
+                        <a href="#moderation" class="menu-item">Moderation</a>
+                        <a href="#music" class="menu-item">Music System</a>
+                        <a href="#economy" class="menu-item">Economy</a>
+                        <a href="#automod" class="menu-item">Auto-Moderation</a>
+                    </div>
+                    <div class="menu-section">
+                        <div class="menu-title">Advanced</div>
+                        <a href="#api" class="menu-item">API Integration</a>
+                        <a href="#custom-commands" class="menu-item">Custom Commands</a>
+                        <a href="#web-dashboard" class="menu-item">Web Dashboard</a>
+                    </div>
+                </div>
+            </aside>
+
+            <article class="docs-content">
+                <section id="installation" class="doc-section">
+                    <h2 class="section-title hyper-gradient">Installation</h2>
+                    <p>To add Hyper Ultra to your Discord server, click the invite button below:</p>
+                    <button class="hyper-btn hyper-primary" id="docs-invite">
+                        <i class="fas fa-robot"></i> Invite Hyper Ultra
+                    </button>
+                    
+                    <h3>Requirements</h3>
+                    <ul class="docs-list">
+                        <li>Discord server with Manage Server permission</li>
+                        <li>Recommended permissions: See permission section</li>
+                        <li>Node.js v16+ if self-hosting</li>
+                    </ul>
+                </section>
+
+                <section id="configuration" class="doc-section">
+                    <h2>Configuration</h2>
+                    <p>After inviting the bot, configure it using the following commands:</p>
+                    <div class="code-block">
+                        <code>/setup</code>
+                        <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <p>This will guide you through the initial setup process.</p>
+                    
+                    <h3>Dashboard Configuration</h3>
+                    <p>For advanced configuration, use our web dashboard:</p>
+                    <button class="hyper-btn hyper-secondary">
+                        <i class="fas fa-external-link-alt"></i> Open Dashboard
+                    </button>
+                </section>
+
+                <section id="moderation" class="doc-section">
+                    <h2>Moderation System</h2>
+                    <p>Hyper Ultra comes with a comprehensive moderation system:</p>
+                    
+                    <div class="feature-table">
+                        <div class="table-row">
+                            <div class="table-cell">Kick</div>
+                            <div class="table-cell">/kick [user] (reason)</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Ban</div>
+                            <div class="table-cell">/ban [user] (reason) (days)</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Mute</div>
+                            <div class="table-cell">/mute [user] [time] (reason)</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">Warn</div>
+                            <div class="table-cell">/warn [user] [reason]</div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <footer class="hyper-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="hyper-gradient">HYPER</span>ULTRA
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2023 Hyper Ultra Bot. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
