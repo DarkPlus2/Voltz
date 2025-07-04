@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPER ULTRA BOT | Commands</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    <div class="content">
+        <nav class="hyper-nav">
+            <div class="nav-brand">
+                <span class="hyper-gradient">HYPER</span>ULTRA
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="docs.html">Docs</a>
+                <a href="commands.html" class="active">Commands</a>
+                <a href="#" id="invite-btn">Invite</a>
+                <a href="#" id="support-btn">Support</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <main class="commands-container">
+            <div class="commands-header">
+                <h1 class="hyper-gradient">Command List</h1>
+                <p>Hyper Ultra comes with 200+ commands. Use the search below to find specific commands.</p>
+                <div class="command-search">
+                    <input type="text" id="command-search" placeholder="Search commands...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="command-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="moderation">Moderation</button>
+                    <button class="filter-btn" data-category="music">Music</button>
+                    <button class="filter-btn" data-category="fun">Fun</button>
+                    <button class="filter-btn" data-category="utility">Utility</button>
+                </div>
+            </div>
+
+            <div class="commands-grid" id="commands-grid">
+                <!-- Commands will be loaded from JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <footer class="hyper-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="hyper-gradient">HYPER</span>ULTRA
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2023 Hyper Ultra Bot. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
